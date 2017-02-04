@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+
+<head>
+  <title>Rames</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ngProgress.css">
+  <link rel="stylesheet" href="css/toaster.css">
+  <style>
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body ng-cloak>
+
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+      <a class="navbar-brand" href="index.html">UXinn</a>
+    </div>
+    <!-- /.navbar-header -->
+
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="active"><a href="/">My Reports</a></li>
+      <li><a ng-href="#/about">About RAMES</a></li>
+      <li><a ng-href="/">About the creator</a></li>
+      <li><a ng-href="/">Contact us</a></li>
+      <li><a ng-href="/">Settings</a></li>
+      <li><a ng-href="#/">Log Out</a></li>
+    </ul>
+    <!-- /.navbar-top-links -->
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ng-view></div>
+
+  </div>
+
+
+  <div data-loading></div>
+  <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-center'}"></toaster-container>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-resource.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/ngProgress.min.js"></script>
+  <script src="js/toaster.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/products.js"></script>
+  <script src="app/controllers/about.js"></script>
+  <script src="app/routes.js"></script>
+</body>
+
+</html>
